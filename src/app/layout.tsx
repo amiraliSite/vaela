@@ -1,47 +1,30 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Vazirmatn } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as SonnerToaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/site/theme-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const vazirmatn = Vazirmatn({
-  variable: "--font-vazirmatn",
-  subsets: ["arabic", "latin"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "VAELA — کوله و کیف دوشی پریمیوم | سفر با وقار",
+  title: "VAELA — Premium Leather Bags & Backpacks | Travel with Grace",
   description:
-    "VAELA، برند کوله و کیف دوشی پریمیوم. چرم طبیعی، دست‌دوز، طراحی مینیمال. ساخته‌شده برای سفرهایی که به یاد می‌مانند.",
+    "VAELA. Premium hand-stitched shoulder bags and backpacks in vegetable-tanned leather. Crafted slowly, built to last.",
   keywords: [
-    "کوله",
-    "کیف دوشی",
-    "چرم طبیعی",
-    "کیف دست‌دوز",
     "VAELA",
-    "bag",
+    "leather bag",
     "backpack",
-    "leather",
+    "shoulder bag",
+    "vegetable-tanned",
+    "hand-stitched",
+    "premium",
   ],
   authors: [{ name: "VAELA Studio" }],
   icons: {
     icon: "/logo.svg",
   },
   openGraph: {
-    title: "VAELA — سفر با وقار",
-    description: "کوله و کیف دوشی پریمیوم، دست‌دوز از چرم طبیعی.",
+    title: "VAELA — Travel with Grace",
+    description:
+      "Premium hand-stitched leather bags & backpacks. Crafted slowly, built to last.",
     siteName: "VAELA",
     type: "website",
   },
@@ -53,10 +36,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl" suppressHydrationWarning>
-      <body
-        className={`${vazirmatn.variable} ${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
-      >
+    <html lang="en" dir="ltr" suppressHydrationWarning>
+      <head>
+        {/* External typography via Google Fonts CDN */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Inter:wght@300..900&family=JetBrains+Mono:wght@400..700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="antialiased bg-background text-foreground">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

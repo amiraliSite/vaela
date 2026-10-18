@@ -2,20 +2,20 @@
 
 import * as React from "react"
 import { motion, useScroll, useTransform, useInView } from "framer-motion"
-import { formatToman } from "@/lib/data"
+import { formatPrice } from "@/lib/data"
 import { Check } from "lucide-react"
 
 const annotations = [
-  { top: "22%", left: "8%", label: "چرم گاوی ۲٫۲ میلی‌متری", side: "right" as const },
-  { top: "55%", left: "78%", label: "زیپ YKK ضدزنگ", side: "left" as const },
-  { top: "80%", left: "15%", label: "پایه دوخته‌دوگانه", side: "right" as const },
+  { top: "22%", left: "8%", label: "2.2mm cowhide", side: "right" as const },
+  { top: "55%", left: "78%", label: "YKK rustproof zip", side: "left" as const },
+  { top: "80%", left: "15%", label: "Double-stitched base", side: "right" as const },
 ]
 
 const specs = [
-  "بدنه ضدآب با پوشش DWR",
-  "بخش لپ‌تاپ تا ۱۶ اینچ",
-  "جیب مخفی ضدسرقت",
-  "بند قفسه سینه‌ی دو وضعیتی",
+  "DWR-coated water-resistant shell",
+  "Fits laptops up to 16 inches",
+  "Hidden anti-theft pocket",
+  "Dual-mode sternum strap",
 ]
 
 export function Spotlight() {
@@ -51,7 +51,7 @@ export function Spotlight() {
           >
             <img
               src="https://images.unsplash.com/photo-1622560455234-0c8437613c8b?auto=format&fit=crop&w=1000&q=80"
-              alt="کوله اورا تریپ"
+              alt="Aura Trip travel pack"
               className="h-full w-full object-cover"
               loading="lazy"
             />
@@ -96,11 +96,11 @@ export function Spotlight() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="absolute -bottom-4 right-4 rounded-2xl border border-border/50 bg-background px-4 py-3 shadow-xl"
+            className="absolute -bottom-4 left-4 rounded-2xl border border-border/50 bg-background px-4 py-3 shadow-xl"
           >
-            <div className="text-[10px] text-foreground/50">شروع از</div>
+            <div className="text-[10px] text-foreground/50">Starting at</div>
             <div className="text-lg font-bold">
-              {formatToman(7_900_000)} <span className="text-xs font-normal">ت</span>
+              {formatPrice(790)}
             </div>
           </motion.div>
         </div>
@@ -113,16 +113,16 @@ export function Spotlight() {
             viewport={{ once: true }}
             className="font-mono text-xs uppercase tracking-widest text-accent"
           >
-            ۰۲ — محصول ویژه
+            02 — Featured
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl"
+            className="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl"
           >
-            اورا تریپ
+            Aura Trip
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -131,7 +131,7 @@ export function Spotlight() {
             transition={{ delay: 0.2 }}
             className="mt-2 font-mono text-sm text-foreground/60"
           >
-            AURA TRIP — ۴۰L Travel Pack
+            AURA TRIP — 40L Travel Pack
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -140,9 +140,9 @@ export function Spotlight() {
             transition={{ delay: 0.3 }}
             className="mt-5 max-w-md text-base leading-relaxed text-foreground/70"
           >
-            کوله‌ای که برای سفرهای طولانی طراحی شده. ۴۰ لیتر گنجایش، بخش جداگانه
-            کفش، بدنه ضدآب و بند قفسه‌ای که در ۶۰ ثانیه به کیف دستی تبدیل می‌شه.
-            همراه هر سفر، هر آب‌وهوا، هر فصل.
+            Built for the long haul. 40L capacity, separate shoe & laundry bay,
+            weatherproof shell, and a sternum strap that converts to a
+            hand-carry in 60 seconds. Every trip, every climate, every season.
           </motion.p>
 
           <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -174,13 +174,13 @@ export function Spotlight() {
               href="#"
               className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-all hover:gap-3"
             >
-              افزودن به سبد
+              Add to cart
             </a>
             <a
               href="#lookbook"
               className="inline-flex items-center gap-2 rounded-full border border-border/60 px-6 py-3 text-sm font-medium text-foreground/80 hover:border-accent hover:text-accent"
             >
-              دیدن در لوک‌بوک
+              View in lookbook
             </a>
           </motion.div>
         </div>

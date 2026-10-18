@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { motion, useInView } from "framer-motion"
-import { products, formatToman, type Product } from "@/lib/data"
+import { products, formatPrice, type Product } from "@/lib/data"
 import { Plus } from "lucide-react"
 
 function ProductCard({ p, i }: { p: Product; i: number }) {
@@ -49,15 +49,15 @@ function ProductCard({ p, i }: { p: Product; i: number }) {
 
           {/* Tag */}
           {p.tag && (
-            <span className="absolute right-3 top-3 rounded-full bg-accent px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-accent-foreground">
+            <span className="absolute left-3 top-3 rounded-full bg-accent px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-accent-foreground">
               {p.tag}
             </span>
           )}
 
           {/* Quick add */}
           <button
-            className="absolute bottom-3 left-3 flex h-10 w-10 items-center justify-center rounded-full bg-background/90 text-foreground opacity-0 backdrop-blur transition-all duration-300 hover:bg-accent hover:text-accent-foreground group-hover:opacity-100"
-            aria-label="افزودن به سبد"
+            className="absolute bottom-3 right-3 flex h-10 w-10 items-center justify-center rounded-full bg-background/90 text-foreground opacity-0 backdrop-blur transition-all duration-300 hover:bg-accent hover:text-accent-foreground group-hover:opacity-100"
+            aria-label="Add to cart"
             style={{ transform: "translateZ(40px)" }}
           >
             <Plus className="h-4 w-4" />
@@ -67,7 +67,7 @@ function ProductCard({ p, i }: { p: Product; i: number }) {
         {/* Body */}
         <div className="p-4">
           <div className="mb-1 flex items-center justify-between gap-2">
-            <h3 className="font-bold tracking-tight">{p.name}</h3>
+            <h3 className="font-display font-bold tracking-tight">{p.name}</h3>
             <span className="font-mono text-xs text-foreground/50">{p.en}</span>
           </div>
           <p className="mb-3 text-xs text-foreground/60">{p.blurb}</p>
@@ -81,14 +81,14 @@ function ProductCard({ p, i }: { p: Product; i: number }) {
               />
               <span className="text-xs text-foreground/70">{p.color}</span>
             </div>
-            <div className="text-left">
+            <div className="text-right">
               {p.oldPrice && (
                 <div className="text-[10px] text-foreground/40 line-through">
-                  {formatToman(p.oldPrice)} ت
+                  {formatPrice(p.oldPrice)}
                 </div>
               )}
               <div className="text-sm font-bold">
-                {formatToman(p.price)} <span className="text-xs font-normal">ت</span>
+                {formatPrice(p.price)}
               </div>
             </div>
           </div>
@@ -112,18 +112,18 @@ export function Collection() {
               transition={{ duration: 0.5 }}
               className="font-mono text-xs uppercase tracking-widest text-accent"
             >
-              ۰۱ — کالکشن
+              01 — Collection
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl"
+              className="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl"
             >
-              قطعاتی که
+              Pieces that
               <br className="hidden sm:block" />
-              <span className="text-foreground/40"> همراهت می‌شن.</span>
+              <span className="text-foreground/40"> travel with you.</span>
             </motion.h2>
           </div>
           <motion.a
@@ -134,7 +134,7 @@ export function Collection() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="self-start text-sm text-foreground/60 underline-offset-4 hover:text-accent hover:underline sm:self-auto"
           >
-            مشاهده‌ی همه‌ی محصولات ←
+            View all products →
           </motion.a>
         </div>
 

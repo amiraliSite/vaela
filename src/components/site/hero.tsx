@@ -2,9 +2,9 @@
 
 import * as React from "react"
 import { motion, useScroll, useTransform, type Variants } from "framer-motion"
-import { ArrowDown, ArrowLeft } from "lucide-react"
+import { ArrowDown, ArrowRight } from "lucide-react"
 
-const headline = ["سفر", "با", "وقار"]
+const headline = ["Travel", "with", "Grace"]
 
 const wordVariants: Variants = {
   hidden: { y: "110%" },
@@ -78,16 +78,16 @@ export function Hero() {
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/40 px-3 py-1 text-xs text-foreground/70 backdrop-blur"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            <span>کالکشن بهار ۱۴۰۵ — موجود شد</span>
+            <span>Spring 2025 Collection — Now Available</span>
           </motion.div>
 
           {/* Headline with reveal mask */}
-          <h1 className="font-bold leading-[0.95] tracking-tight">
+          <h1 className="font-display font-bold leading-[0.95] tracking-tight">
             <span className="block text-5xl sm:text-7xl lg:text-8xl">
               {headline.map((w, i) => (
                 <span
                   key={i}
-                  className="mr-3 inline-block overflow-hidden align-bottom"
+                  className="mr-4 inline-block overflow-hidden align-bottom"
                   style={{ paddingBottom: "0.1em" }}
                 >
                   <motion.span
@@ -122,8 +122,9 @@ export function Hero() {
             animate="visible"
             className="mt-6 max-w-md text-base text-foreground/70 sm:text-lg"
           >
-            کوله و کیف دوشی دست‌دوز از چرم دباغی‌شده با گیاه. ساخته‌شده در کارگاه
-            ما برای سفرهایی که ماندگارن — مثل خود چرم.
+            Premium hand-stitched shoulder bags and backpacks in
+            vegetable-tanned leather. Built in our workshop for journeys
+            that last — like the leather itself.
           </motion.p>
 
           {/* CTAs */}
@@ -138,14 +139,14 @@ export function Hero() {
               href="#collection"
               className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-all hover:gap-3 hover:shadow-[0_8px_30px_-6px] hover:shadow-accent/50"
             >
-              دیدن کالکشن
-              <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+              View Collection
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#spotlight"
               className="inline-flex items-center gap-2 rounded-full border border-border/60 px-6 py-3 text-sm font-medium text-foreground/80 transition-colors hover:border-accent hover:text-accent"
             >
-              داستان ما
+              Our Story
             </a>
           </motion.div>
 
@@ -158,9 +159,9 @@ export function Hero() {
             className="mt-10 flex flex-wrap items-center gap-8 border-t border-border/40 pt-6 text-sm"
           >
             {[
-              { k: "+۱۲ سال", v: "تجربه دست‌دوزی" },
-              { k: "+۸٬۵۰۰", v: "کیف تحویل‌شده" },
-              { k: "۴٫۹ از ۵", v: "میانگین رضایت" },
+              { k: "15+ yrs", v: "Craft experience" },
+              { k: "8,500+", v: "Bags delivered" },
+              { k: "4.9 / 5", v: "Average rating" },
             ].map((s) => (
               <div key={s.v}>
                 <div className="text-xl font-bold text-foreground">{s.k}</div>
@@ -188,7 +189,7 @@ export function Hero() {
             >
               <img
                 src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80"
-                alt="کوله چرمی پریمیوم VAELA"
+                alt="Premium VAELA leather backpack"
                 className="h-full w-full object-cover"
                 loading="eager"
               />
@@ -197,26 +198,26 @@ export function Hero() {
 
             {/* Floating chip — top */}
             <motion.div
-              initial={{ opacity: 0, y: 20, x: 20 }}
+              initial={{ opacity: 0, y: 20, x: -20 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 1.4, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute -left-4 top-8 hidden rounded-2xl border border-border/40 bg-card/80 p-3 backdrop-blur-xl sm:block"
+              className="absolute -right-4 top-8 hidden rounded-2xl border border-border/40 bg-card/80 p-3 backdrop-blur-xl sm:block"
             >
               <div className="text-[10px] uppercase tracking-widest text-foreground/50">
-                جنس
+                Material
               </div>
-              <div className="text-sm font-bold">چرم گاوی دست‌دوز</div>
+              <div className="text-sm font-bold">Hand-stitched cowhide</div>
             </motion.div>
 
             {/* Floating chip — bottom */}
             <motion.div
-              initial={{ opacity: 0, y: -20, x: -20 }}
+              initial={{ opacity: 0, y: -20, x: 20 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ duration: 0.8, delay: 1.6, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute -right-4 bottom-12 hidden rounded-2xl border border-border/40 bg-card/80 p-3 backdrop-blur-xl sm:block"
+              className="absolute -left-4 bottom-12 hidden rounded-2xl border border-border/40 bg-card/80 p-3 backdrop-blur-xl sm:block"
             >
               <div className="flex items-center gap-2">
-                <div className="flex -space-x-2 -space-x-reverse">
+                <div className="flex -space-x-2">
                   {["#7a2f24", "#b88a5a", "#2a2522"].map((c) => (
                     <span
                       key={c}
@@ -225,9 +226,9 @@ export function Hero() {
                     />
                   ))}
                 </div>
-                <div className="text-sm font-bold">+۲۴ رنگ</div>
+                <div className="text-sm font-bold">+24 colors</div>
               </div>
-              <div className="text-[10px] text-foreground/50">پالت فصلی</div>
+              <div className="text-[10px] text-foreground/50">Seasonal palette</div>
             </motion.div>
 
             {/* Floating chip — price */}
@@ -235,9 +236,9 @@ export function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.8 }}
-              className="absolute bottom-4 right-4 rounded-full bg-background/90 px-3 py-1.5 text-xs font-bold backdrop-blur"
+              className="absolute bottom-4 left-4 rounded-full bg-background/90 px-3 py-1.5 text-xs font-bold backdrop-blur"
             >
-              از ۲٬۷۵۰٬۰۰۰ ت
+              From $275
             </motion.div>
           </div>
         </motion.div>
@@ -251,7 +252,7 @@ export function Hero() {
         transition={{ delay: 2 }}
         className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-xs text-foreground/50"
       >
-        <span className="rotate-180 [writing-mode:vertical-rl]">SCROLL</span>
+        <span className="font-mono uppercase tracking-widest">Scroll</span>
         <motion.span
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

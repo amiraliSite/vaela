@@ -20,13 +20,13 @@ export function CTA() {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email || !email.includes("@")) {
-      toast.error("یه ایمیل معتبر وارد کن")
+      toast.error("Please enter a valid email.")
       return
     }
     setBusy(true)
     // simulate request
     await new Promise((r) => setTimeout(r, 700))
-    toast.success("ماله شد! به جمع ما خوش اومدی.")
+    toast.success("You're in. Welcome to the inner circle.")
     setEmail("")
     setBusy(false)
   }
@@ -51,16 +51,17 @@ export function CTA() {
           className="relative overflow-hidden rounded-[2.5rem] border border-border/50 bg-background/70 p-8 backdrop-blur-xl sm:p-12 lg:p-16"
         >
           <span className="font-mono text-xs uppercase tracking-widest text-accent">
-            ۰۶ — خبرنامه
+            06 — Newsletter
           </span>
-          <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight sm:text-5xl">
-            اولین نفری باش که
+          <h2 className="mt-3 font-display text-balance text-3xl font-bold tracking-tight sm:text-5xl">
+            Be the first to see
             <br />
-            <span className="text-accent">کالکشن جدید رو می‌بینه.</span>
+            <span className="text-accent">the new collection.</span>
           </h2>
           <p className="mt-4 max-w-xl text-base text-foreground/70">
-            هر ماه یه نامه با اتمسفر برند، داستان پشت محصول، و کد تخفیف ویژه
-            برای مشترکین. بدون اسپم، قول می‌دم.
+            Every month, a letter with brand atmosphere, the story behind the
+            craft, and a special discount code for subscribers. No spam, I
+            promise.
           </p>
 
           <form onSubmit={submit} className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -68,32 +69,32 @@ export function CTA() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="ایمیلت..."
+              placeholder="Your email..."
               className="h-12 flex-1 rounded-full border border-border/60 bg-background/80 px-5 text-sm outline-none transition-colors placeholder:text-foreground/40 focus:border-accent"
-              aria-label="ایمیل"
+              aria-label="Email"
             />
             <button
               type="submit"
               disabled={busy}
               className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground transition-all hover:gap-3 disabled:opacity-50"
             >
-              {busy ? "صبر کن..." : "عضو شو"}
-              <Send className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+              {busy ? "Hold on..." : "Join now"}
+              <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </button>
           </form>
 
           <div className="mt-4 flex flex-wrap items-center gap-4 text-xs text-foreground/50">
             <span className="inline-flex items-center gap-1">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              بدون اسپم
+              No spam
             </span>
             <span className="inline-flex items-center gap-1">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              لغو هر زمان
+              Unsubscribe anytime
             </span>
             <span className="inline-flex items-center gap-1">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              ۱۲٬۴۰۰ عضو فعال
+              12,400 active members
             </span>
           </div>
         </motion.div>

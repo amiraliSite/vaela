@@ -22,16 +22,16 @@ export function Features() {
             viewport={{ once: true }}
             className="font-mono text-xs uppercase tracking-widest text-accent"
           >
-            ۰۳ — چرا VAELA؟
+            03 — Why VAELA
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl"
+            className="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl"
           >
-            خیلی فراتر از یه کیف.
+            Beyond a bag.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -40,17 +40,17 @@ export function Features() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-base text-foreground/60"
           >
-            ما فقط کیف نمی‌سازیم. یه ابزار ماندگار می‌سازیم که همراه سفرت می‌شه
-            و با گذر زمان زیباتر می‌شه. این قول ماست.
+            We don't just make bags. We build a lasting companion for your
+            journeys — one that gets better with age. That's our promise.
           </motion.p>
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: "leaf" as const, title: "چرم دباغی سبز", desc: "چرم گاوی با فرآیند دباغی گیاهی، بدون فلز سنگین، ۱۰۰٪ قابل تجزیه." },
-            { icon: "hand" as const, title: "دست‌دوز اصیل", desc: "هر کیف توسط استادکاران ما با دوخت دوگانه دوخته می‌شه — مقاوم در برابر پارگی." },
-            { icon: "shield" as const, title: "گارانش مادام‌العمر", desc: "هر ایراد ساختاری رو بدون محدودیت زمان تعمیر می‌کنیم. واقعاً مادام‌العمر." },
-            { icon: "truck" as const, title: "ارسال رایگان", desc: "ارسال رایگان به سراسر ایران برای سفارش‌های بالای ۳ میلیون تومان." },
+            { icon: "leaf" as const, title: "Vegetable-Tanned", desc: "Cowhide tanned with plant extracts, no heavy metals, 100% biodegradable." },
+            { icon: "hand" as const, title: "Hand-Stitched", desc: "Every bag stitched by our craftspeople with double-stitched seams — built to resist tearing." },
+            { icon: "shield" as const, title: "Lifetime Warranty", desc: "Any structural defect is repaired without time limit. Truly lifetime." },
+            { icon: "truck" as const, title: "Free Shipping", desc: "Free shipping worldwide on orders over $300." },
           ].map((f, i) => {
             const Icon = icons[f.icon]
             return (
@@ -68,7 +68,7 @@ export function Features() {
                 <div className="relative mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10 text-accent transition-transform duration-300 group-hover:scale-110">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h3 className="mb-2 text-lg font-bold">{f.title}</h3>
+                <h3 className="mb-2 font-display text-lg font-bold">{f.title}</h3>
                 <p className="text-sm leading-relaxed text-foreground/60">{f.desc}</p>
 
                 <div className="mt-4 font-mono text-[10px] uppercase tracking-widest text-foreground/30">

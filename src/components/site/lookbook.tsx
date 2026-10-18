@@ -11,8 +11,9 @@ export function Lookbook() {
     offset: ["start start", "end end"],
   })
 
-  // horizontal pan as user scrolls vertically through this section
-  const x = useTransform(scrollYProgress, [0, 1], ["2%", "-65%"])
+  // horizontal pan as user scrolls vertically through this section.
+  // LTR reading: items are arranged left-to-right; content pans left to reveal later items.
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-65%"])
 
   return (
     <section
@@ -26,14 +27,14 @@ export function Lookbook() {
           <div className="flex items-end justify-between">
             <div>
               <span className="font-mono text-xs uppercase tracking-widest text-accent">
-                ۰۴ — لوک‌بوک
+                04 — Lookbook
               </span>
-              <h2 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
-                فصل‌های ما
+              <h2 className="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl">
+                Our seasons
               </h2>
             </div>
             <span className="hidden text-sm text-foreground/50 sm:block">
-              اسکرول کنید ←
+              Scroll →
             </span>
           </div>
         </div>
@@ -54,11 +55,11 @@ export function Lookbook() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
 
-                <div className="absolute bottom-0 right-0 left-0 p-6">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="mb-1 font-mono text-[10px] uppercase tracking-widest text-accent">
                     {String(i + 1).padStart(2, "0")} — {item.tone}
                   </div>
-                  <h3 className="text-3xl font-bold sm:text-4xl">{item.title}</h3>
+                  <h3 className="font-display text-3xl font-bold sm:text-4xl">{item.title}</h3>
                   <p className="mt-1 text-sm text-foreground/70">{item.caption}</p>
                 </div>
 

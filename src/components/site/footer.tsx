@@ -7,30 +7,30 @@ import { Instagram, Twitter, Send, MapPin } from "lucide-react"
 
 const cols = [
   {
-    title: "محصولات",
+    title: "Products",
     links: [
-      { label: "کوله", href: "#" },
-      { label: "کیف دوشی", href: "#" },
-      { label: "متقاطع", href: "#" },
-      { label: "محدود", href: "#" },
+      { label: "Backpacks", href: "#" },
+      { label: "Shoulder", href: "#" },
+      { label: "Sling", href: "#" },
+      { label: "Limited", href: "#" },
     ],
   },
   {
-    title: "درباره",
+    title: "About",
     links: [
-      { label: "داستان ما", href: "#features" },
-      { label: "کارگاه", href: "#" },
-      { label: "پایداری", href: "#" },
-      { label: "تماس", href: "#" },
+      { label: "Our story", href: "#features" },
+      { label: "Workshop", href: "#" },
+      { label: "Sustainability", href: "#" },
+      { label: "Contact", href: "#" },
     ],
   },
   {
-    title: "کمک",
+    title: "Help",
     links: [
-      { label: "ارسال و بازگشت", href: "#" },
-      { label: "گارانش", href: "#" },
-      { label: "راهنمای اندازه", href: "#" },
-      { label: "سوال‌های متداول", href: "#" },
+      { label: "Shipping & returns", href: "#" },
+      { label: "Warranty", href: "#" },
+      { label: "Size guide", href: "#" },
+      { label: "FAQ", href: "#" },
     ],
   },
 ]
@@ -46,16 +46,16 @@ export function Footer() {
               <span className="flex h-9 w-9 items-center justify-center rounded-full border border-accent/50">
                 <span className="font-mono text-sm font-bold text-accent">V</span>
               </span>
-              <span className="text-lg font-bold tracking-[0.2em]">VAELA</span>
+              <span className="font-display text-lg font-bold tracking-[0.2em]">VAELA</span>
             </Link>
             <p className="mt-3 text-sm text-foreground/60">
-              کوله و کیف دوشی پریمیوم، دست‌دوز از چرم طبیعی. ساخته‌شده با عشق
-              در تهران.
+              Premium hand-stitched leather bags & backpacks. Crafted slowly
+              in our workshop in Tehran.
             </p>
 
             <div className="mt-4 flex items-center gap-2 text-xs text-foreground/60">
               <MapPin className="h-3.5 w-3.5 text-accent" />
-              <span>تهران، خیابان فرشته</span>
+              <span>Tehran, Ferchteh St.</span>
             </div>
 
             {/* Socials */}
@@ -65,7 +65,7 @@ export function Footer() {
                   key={i}
                   href="#"
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-border/60 text-foreground/70 transition-colors hover:border-accent hover:text-accent"
-                  aria-label="social"
+                  aria-label="Social"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -100,11 +100,11 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-4 pt-6 sm:flex-row">
           <p className="text-xs text-foreground/50">
-            © ۱۴۰۵ VAELA Studio — تمام حقوق محفوظ است.
+            © 2025 VAELA Studio — All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-foreground/50">
-            <Link href="#" className="hover:text-accent">حریم خصوصی</Link>
-            <Link href="#" className="hover:text-accent">شرایط استفاده</Link>
+            <Link href="#" className="hover:text-accent">Privacy</Link>
+            <Link href="#" className="hover:text-accent">Terms</Link>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@ export function Footer() {
           transition={{ duration: 0.8 }}
           className="select-none text-center"
         >
-          <span className="block bg-gradient-to-b from-foreground/15 to-foreground/5 bg-clip-text text-[18vw] font-bold leading-none tracking-tighter text-transparent">
+          <span className="font-display block bg-gradient-to-b from-foreground/15 to-foreground/5 bg-clip-text text-[18vw] font-bold leading-none tracking-tighter text-transparent">
             VAELA
           </span>
         </motion.div>

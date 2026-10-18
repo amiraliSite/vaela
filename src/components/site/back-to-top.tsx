@@ -21,8 +21,8 @@ export function BackToTop() {
           exit={{ opacity: 0, scale: 0.5, y: 20 }}
           transition={{ duration: 0.25 }}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-5 left-5 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-[0_8px_30px_-6px] shadow-accent/60 hover:scale-110"
-          aria-label="بازگشت به بالا"
+          className="fixed bottom-5 right-5 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-[0_8px_30px_-6px] shadow-accent/60 hover:scale-110"
+          aria-label="Back to top"
         >
           <ArrowUp className="h-4 w-4" />
         </motion.button>

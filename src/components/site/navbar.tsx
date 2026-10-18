@@ -8,11 +8,11 @@ import { ThemeToggle } from "./theme-toggle"
 import { Button } from "@/components/ui/button"
 
 const links = [
-  { href: "#collection", label: "کالکشن" },
-  { href: "#spotlight", label: "محصول ویژه" },
-  { href: "#features", label: "چرا VAELA؟" },
-  { href: "#lookbook", label: "لوک‌بوک" },
-  { href: "#testimonials", label: "تجربه‌ها" },
+  { href: "#collection", label: "Collection" },
+  { href: "#spotlight", label: "Featured" },
+  { href: "#features", label: "Why VAELA" },
+  { href: "#lookbook", label: "Lookbook" },
+  { href: "#testimonials", label: "Voices" },
 ]
 
 export function Navbar() {
@@ -49,7 +49,7 @@ export function Navbar() {
               V
             </span>
           </span>
-          <span className="text-lg font-bold tracking-[0.2em]">
+          <span className="font-display text-lg font-bold tracking-[0.2em]">
             VAELA
           </span>
         </Link>
@@ -68,7 +68,7 @@ export function Navbar() {
                 className="group relative text-sm text-foreground/80 transition-colors hover:text-foreground"
               >
                 {l.label}
-                <span className="absolute -bottom-1 right-0 h-[1px] w-0 bg-accent transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-accent transition-all duration-300 group-hover:w-full" />
               </Link>
             </motion.div>
           ))}
@@ -81,11 +81,11 @@ export function Navbar() {
             size="icon"
             variant="ghost"
             className="relative h-9 w-9 rounded-full"
-            aria-label="سبد خرید"
+            aria-label="Shopping cart"
           >
             <ShoppingBag className="h-4 w-4" />
             <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] font-bold text-accent-foreground">
-              ۲
+              2
             </span>
           </Button>
           <Button
@@ -93,7 +93,7 @@ export function Navbar() {
             variant="ghost"
             className="md:hidden h-9 w-9 rounded-full"
             onClick={() => setOpen((v) => !v)}
-            aria-label="منو"
+            aria-label="Menu"
           >
             {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </Button>
