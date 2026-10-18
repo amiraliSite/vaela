@@ -52,3 +52,14 @@ prompt
 server.log
 # Skills directory
 /skills/
+
+# Sandbox-only artifacts (not part of the project source)
+/download/
+/.zscripts/
+/scripts/
+/examples/
+/tests/
+/mini-services/
+/db/
+Caddyfile
+.assistant
