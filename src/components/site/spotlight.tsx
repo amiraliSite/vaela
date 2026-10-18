@@ -50,7 +50,7 @@ export function Spotlight() {
             className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-border/40"
           >
             <img
-              src="https://images.unsplash.com/photo-1622560455234-0c8437613c8b?auto=format&fit=crop&w=1000&q=80"
+              src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6b5c7a82db67.png"
               alt="Aura Trip travel pack"
               className="h-full w-full object-cover"
               loading="lazy"

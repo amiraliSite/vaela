@@ -23,7 +23,7 @@ export const products: Product[] = [
     color: "Oxblood",
     hex: "#7a2f24",
     image:
-      "https://images.unsplash.com/photo-1547949003-979ea89b1875?auto=format&fit=crop&w=900&q=80",
+      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/41edca08f04a.png",
     tag: "Best Seller",
     blurb: "Hand-stitched cowhide with a tweed inner lining.",
   },
@@ -36,7 +36,7 @@ export const products: Product[] = [
     color: "Charcoal",
     hex: "#2a2522",
     image:
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80",
+      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/93f011f26aff.jpg",
     tag: "New",
     blurb: "24L daypack with weatherproof shell and 16\" laptop bay.",
   },
@@ -49,7 +49,7 @@ export const products: Product[] = [
     color: "Sand",
     hex: "#b88a5a",
     image:
-      "https://images.unsplash.com/photo-1591561954557-2694ec8e8e43?auto=format&fit=crop&w=900&q=80",
+      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b4224127f3ed.jpg",
     blurb: "Low-profile sling with a quick-access magnetic pocket.",
   },
   {
@@ -61,7 +61,7 @@ export const products: Product[] = [
     color: "Cream",
     hex: "#e8d8b9",
     image:
-      "https://images.unsplash.com/photo-1584917895491-0c00a9ef2e4c?auto=format&fit=crop&w=900&q=80",
+      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/cd0db7f93f00.jpg",
     tag: "Limited",
     blurb: "Limited run with hand-laid panelling and twisted handle.",
   },
@@ -74,7 +74,7 @@ export const products: Product[] = [
     color: "Onyx",
     hex: "#1c1815",
     image:
-      "https://images.unsplash.com/photo-1622560455234-0c8437613c8b?auto=format&fit=crop&w=900&q=80",
+      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6b5c7a82db67.png",
     blurb: "40L travel pack with separate shoe & laundry bay.",
   },
   {
@@ -86,7 +86,7 @@ export const products: Product[] = [
     color: "Hazel",
     hex: "#7a5a3a",
     image:
-      "https://images.unsplash.com/photo-1590874107925-4810a90aa2e4?auto=format&fit=crop&w=900&q=80",
+      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bf51bd53b67f.png",
     blurb: "Large tote with 18L capacity and a rigid base.",
   },
 ]
@@ -107,7 +107,7 @@ export const testimonials: Testimonial[] = [
     name: "Negar Mohammadi",
     role: "Documentary photographer, Tehran",
     avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
+      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6f2514e32b49.jpg",
   },
   {
     id: "t2",
@@ -116,7 +116,7 @@ export const testimonials: Testimonial[] = [
     name: "Arash Rezaei",
     role: "Travel writer",
     avatar:
-      "https://images.unsplash.com/photo-1500648763791-0033952c6c76?auto=format&fit=crop&w=200&q=80",
+      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7f593db41ba1.jpg",
   },
   {
     id: "t3",
@@ -125,7 +125,7 @@ export const testimonials: Testimonial[] = [
     name: "Sara Kiani",
     role: "Graphic designer",
     avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
+      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/07dd16a0cc20.jpg",
   },
 ]
 
@@ -143,7 +143,7 @@ export const lookbook: Lookbook[] = [
     title: "Desert Bloom",
     caption: "Spring 2025 limited",
     image:
-      "https://images.unsplash.com/photo-1547949003-979ea89b1875?auto=format&fit=crop&w=1200&q=80",
+      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/41edca08f04a.png",
     tone: "warm",
   },
   {
@@ -151,7 +151,7 @@ export const lookbook: Lookbook[] = [
     title: "Midnight",
     caption: "The 8PM collection",
     image:
-      "https://images.unsplash.com/photo-1591561954557-2694ec8e8e43?auto=format&fit=crop&w=1200&q=80",
+      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b4224127f3ed.jpg",
     tone: "dark",
   },
   {
@@ -159,7 +159,7 @@ export const lookbook: Lookbook[] = [
     title: "Coastline",
     caption: "The summer series",
     image:
-      "https://images.unsplash.com/photo-1584917895491-0c00a9ef2e4c?auto=format&fit=crop&w=1200&q=80",
+      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/cd0db7f93f00.jpg",
     tone: "neutral",
   },
   {
@@ -167,7 +167,7 @@ export const lookbook: Lookbook[] = [
     title: "Habitation",
     caption: "Rural hues",
     image:
-      "https://images.unsplash.com/photo-1590874107925-4810a90aa2e4?auto=format&fit=crop&w=1200&q=80",
+      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bf51bd53b67f.png",
     tone: "warm",
   },
   {
@@ -175,7 +175,7 @@ export const lookbook: Lookbook[] = [
     title: "Alpine",
     caption: "The alpine edition",
     image:
-      "https://images.unsplash.com/photo-1622560455234-0c8437613c8b?auto=format&fit=crop&w=1200&q=80",
+      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6b5c7a82db67.png",
     tone: "neutral",
   },
 ]

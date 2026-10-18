@@ -188,7 +188,7 @@ export function Hero() {
               className="grain-bg relative h-full w-full overflow-hidden rounded-[2rem] border border-border/40"
             >
               <img
-                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80"
+                src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/794384051c4e.jpg"
                 alt="Premium VAELA leather backpack"
                 className="h-full w-full object-cover"
                 loading="eager"
